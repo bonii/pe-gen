@@ -1,0 +1,8 @@
+Here is the list of people who have worked on the various components of this project
+
+FCL_INT Tim van Deurzen <tim at kompiler.org>
+FCL_SPEC Tim van Deurzen <tim at kompiler.org>, Vivek Shah <bonii at kompiler.org>
+MASI Vivek Shah <bonii at kompiler.org>
+MASS Tim van Deurzen <tim at kompiler.org>, Vivek Shah <bonii at kompiler.org>
+
+Construction of AST using Lex and Yacc : Tim van Deurzen <tim at kompiler.org>
