@@ -1,0 +1,35 @@
+/*
+ * Calculate the n'th fibonacci number.
+ */
+
+read n -> fibonacci
+
+fibonacci
+{
+    x := 1
+    y := 1
+    z := 1
+
+    if (<= n 1)
+        then return_value
+        else calculate_value
+}
+
+calculate_value
+{
+    z := (+ x y)
+
+    x := y
+    y := z
+
+    n := (- n 1)
+    
+    if (= n 0)
+        then return_value
+        else calculate_value
+}
+
+return_value
+{
+    return z
+}

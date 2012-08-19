@@ -1,0 +1,15 @@
+read x -> main
+
+main 
+{
+    y := (+ (- y 1) 1)
+    x := (- x 1)
+    if (= x 0)
+        then exit
+        else main
+}
+
+exit
+{
+    return y
+}

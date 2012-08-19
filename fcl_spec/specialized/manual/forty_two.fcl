@@ -1,0 +1,6 @@
+read -> main
+
+main
+{
+    return 42
+}

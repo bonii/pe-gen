@@ -1,0 +1,88 @@
+/*
+ * test_11.fcl -- computation of the next perfect number in FCL
+ *
+ * Given an integer as input, the program computes the smallest
+ * perfect number greater than that integer.
+ *
+ * A "perfect number" is an integer that is equal to the sum
+ * of all its exact divisors, including 1 but excluding itself.
+ *
+ * Example: perfect integer 28 = 1 + 2 + 4 + 7 + 14 .
+ *
+ * In data:   1   6   28   496  ...
+ * Out data:  6  28  496  8128  ...
+ *
+ */
+
+/*
+((num)
+  (loopnum)
+  (
+  (loopnum  ((num  := (+ num 1))
+             (half := (/ num 2))
+             (div  := 1)
+             (sumdiv := 1))
+            (goto loopsum))
+
+  (loopsum  ((div := (+ div 1)))
+            (if (> div half) exitsum testdiv))
+
+  (testdiv  ()
+            (if (= (* (/ num div) div) num) makesum loopsum))
+
+  (makesum  ((sumdiv := (+ sumdiv div)))
+            (goto loopsum))
+
+  (exitsum  ()
+            (if (= sumdiv num) exitnum loopnum))
+
+  (exitnum  ()
+            (return num))
+  ))
+*/
+
+read num -> loopnum
+
+loopnum 
+{
+    num := (+ num 1)
+    half := (/ num 2)
+    div := 1
+    sumdiv := 1
+    goto loopsum
+}
+
+loopsum
+{
+    div := (+ div 1)
+    if (> div half) 
+        then exitsum 
+        else testdiv
+}
+
+testdiv
+{
+    t1 := (/ num div)
+    t2 := (* t1 div)
+    if (= t2 num)
+        then makesum
+        else loopsum
+}
+
+makesum
+{
+    sumdiv := (+ sumdiv div)
+    goto loopsum
+}
+
+exitsum
+{
+    if (= sumdiv num) 
+        then exitnum
+        else loopnum
+}
+
+exitnum
+{
+    return num
+}

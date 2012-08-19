@@ -1,0 +1,6 @@
+start:
+    mov r2, r3
+    add r2,r3, r4
+    sub r5,r6,r8
+    movi 1, r1
+    halt

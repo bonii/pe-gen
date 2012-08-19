@@ -1,0 +1,8 @@
+start:
+    add r2,r3, r4
+    movi 1, r1
+
+next:
+    movi 4,r3
+    mul r2,r3,r5       
+    halt
