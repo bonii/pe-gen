@@ -1,0 +1,6 @@
+read -> loopnum
+
+loopnum 
+{
+    return 6
+}

@@ -1,0 +1,30 @@
+/*
+ * Silly little example program.
+ *
+ * When run with inputs x = 1,  y = 2, z = 3 it should return 42.
+ */
+
+read x, y, z -> main
+
+begin 
+{
+    c := 10
+    x := (+ x c)
+    goto end
+}
+
+main
+{
+    if (< x 5)
+        then begin
+        else end
+}
+
+end
+{
+    y := (+ x z)
+    z := (+ z y)
+    x := (+ x y z)
+
+    return x
+}

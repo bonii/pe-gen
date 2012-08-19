@@ -1,0 +1,7 @@
+build/
+bin/
+specialized/automatic/
+*.*.swp
+*.swp
+*.o
+*.log

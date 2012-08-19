@@ -1,0 +1,32 @@
+/*
+ * The power program.
+ */
+
+read b, e -> main
+
+main
+{
+    result := 1
+    if (<= e 0)
+        then return_default
+        else calc_power
+}
+
+calc_power 
+{
+    result := (* result b)
+    e := (- e 1)
+    if (= e 0)
+        then return_result
+        else calc_power
+}
+
+return_default
+{
+    return 1
+}
+
+return_result
+{
+    return result
+}

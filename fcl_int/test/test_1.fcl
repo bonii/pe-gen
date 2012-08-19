@@ -1,0 +1,28 @@
+/*
+ * Silly little example program.
+ */
+
+read x, y, z -> main
+
+begin 
+{
+    c := 10
+    x := (+ x c)
+    goto end
+}
+
+main
+{
+    if (< x 5)
+        then begin
+        else end
+}
+
+end
+{
+    y := (+ x z)
+    z := (+ z y)
+    x := (+ x y z)
+
+    return x
+}

@@ -1,0 +1,11 @@
+read b -> main
+
+main
+{
+    result := (* 1 b)
+    result := (* result b)
+    result := (* result b)
+    result := (* result b)
+    result := (* result b)
+    return result
+}

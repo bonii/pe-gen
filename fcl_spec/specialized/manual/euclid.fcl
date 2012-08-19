@@ -1,0 +1,6 @@
+read -> euclid
+
+euclid
+{
+    return 1
+}
