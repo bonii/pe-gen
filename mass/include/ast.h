@@ -17,7 +17,7 @@
     You should have received a copy of the GNU General Public License
     along with MASS.  If not, see <http://www.gnu.org/licenses/>.
 
-    Written by Vivek Shah <bonii@kompiler.org>, Tim van Deurzen <tim(at)kompiler.org>
+    Written by Vivek Shah <bonii(at)kompiler.org>, Tim van Deurzen <tim(at)kompiler.org>
 
 */
 
